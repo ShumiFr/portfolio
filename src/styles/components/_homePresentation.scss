@@ -1,0 +1,48 @@
+.home-presentation {
+    margin-right: 150px;
+}
+
+.home-presentation p:first-child {
+    color: #FFE143;
+}
+
+.home-presentation p {
+    color: #FFF;
+}
+
+.home-presentation h1 {
+    color: #FFF;
+}
+
+.home-presentation-and-logo {
+    margin-top: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typewriter {
+    color: #FFF;
+    width: 28ch;
+    animation: typing 7s steps(28) forwards, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+@keyframes typing {
+    0%, 100%{
+        width: 0;
+    }
+    50%{
+        width: 28ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
