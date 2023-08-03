@@ -1,0 +1,47 @@
+.button button{
+    background-color: #111111;
+    border: none;
+    border-radius: 5px;
+    color: #FFE143;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.button.active {
+    background-color: #1f1f1f;
+}
+
+.button button:first-child {
+    margin-left: 120px;
+}
+
+.button button:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+.button checked {
+    background-color: #1f1f1f;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.skills h1 {
+    margin-left: 10px;
+}
+
+.skills .bar {
+    width: 60px;
+}

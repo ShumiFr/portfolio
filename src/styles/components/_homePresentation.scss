@@ -22,9 +22,12 @@
 }
 
 .typewriter {
-    color: #FFF;
-    width: 28ch;
-    animation: typing 7s steps(28) forwards, blink .5s step-end infinite alternate;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,225,67,1) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 27ch;
+    animation: typing 3s steps(27, end), blink-caret .75s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -33,16 +36,11 @@
 }
 
 @keyframes typing {
-    0%, 100%{
-        width: 0;
-    }
-    50%{
-        width: 28ch;
-    }
+    from { width: 0 }
+    to { width: 90% }
 }
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #FFE143; }
 }

@@ -13,7 +13,9 @@ box-sizing: border-box;
 
 body {
 font-family: $font-1;
-background: #1E1E1E;
+background: #111111;
+max-width: 1440px;
+margin: auto;
 }
 
 li {
