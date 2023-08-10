@@ -1,4 +1,5 @@
 .card-skill {
+    position: relative;
     display: flex;
     align-items: center;
     width: 20%;
@@ -6,6 +7,7 @@
     margin: 20px;
     border: solid 2px #FFE143;
     border-radius: 10px;
+    transition: transform 250ms;
 }
 
 .card-skill .title {
@@ -17,8 +19,14 @@
     background: #1f1f1f;
     transition: all 0.3s;
 
+    .title {
+        transform: translateY(-10px);
+        transition: all 0.3s ease 0s;
+    }
     .level {
-        display: flex;
+        opacity: 1;
+        transform: translateY(15px);
+        transition: all 0.3s ease 0s;
     }
 }
 
@@ -37,9 +45,11 @@
 }
 
 .level {
-    display: none;
+    position: absolute;
+    opacity: 0;
     color: #FFF;
     margin-top: 5px;
+    top: 30px;
 }
 
 .title {

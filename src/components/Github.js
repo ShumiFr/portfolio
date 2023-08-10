@@ -1,5 +1,5 @@
 import React from "react";
-import GithubLogo from "../assets/img/github.svg";
+import GithubLogo from "../assets/img/github.png";
 
 const Github = () => {
   return (
