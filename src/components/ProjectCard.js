@@ -7,7 +7,7 @@ const ProjectCard = (props) => {
     <div className="project-card">
       <Link to={`/projet/${props.id}`} style={{ textDecoration: "none" }}>
         {" "}
-        <img className="project-img" src={props.cover} alt="projet" />
+        <img className="project-img" src={props.picture} alt="projet" />
         <h1 className="title">{props.title}</h1>
         <div className="description">{props.description}</div>
         <div className="project-skills">{props.skills}</div>

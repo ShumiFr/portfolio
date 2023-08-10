@@ -10,7 +10,7 @@ const Gallery = () => {
           key={e.id}
           id={e.id}
           title={e.title}
-          cover={e.cover}
+          picture={e.picture}
           description={e.description}
           skills={e.skills}
           github={e.github}
