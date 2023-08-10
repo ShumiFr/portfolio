@@ -16,8 +16,8 @@
 }
 
 .navigation li {
-    font-size: 20px;
-    margin: 50px;
+    font-size: 15px;
+    margin: 50px 20px;
     color: #FFF;
 }
 
@@ -25,16 +25,15 @@
     text-decoration: none;
 }
 
-.navigation .active {
-    text-decoration: underline;
-    text-decoration-color: #FFE143;
+.navigation .active li{
+    padding-bottom: 5px;
+    border-bottom: solid #FFE143;
     color: #FFF;
 }
 
 .github-logo img{
-    max-width: 60px;
+    width: 60px;
     height: auto;
-    color: #1E1E1E;
 }
 
 

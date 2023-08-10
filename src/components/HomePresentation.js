@@ -7,7 +7,7 @@ const HomePresentation = () => {
       <div className="home-presentation">
         <p>Hello World !</p>
         <h1>Pauline Gagnaire</h1>
-        <div className="typewriter">Développeuse web Junior</div>
+        <div className="typewriter">Développeuse Web Front-End</div>
         <p>De Pâtissière à Développeuse découvrez mon aventure</p>
       </div>
       <div>

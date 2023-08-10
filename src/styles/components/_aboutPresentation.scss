@@ -1,0 +1,44 @@
+.about {
+    position: relative;
+    height: 50%;
+    margin: 0 50px;
+    border-radius: 20px;
+    display: block;
+    background: #191919
+}
+
+.about h1 {
+    color: #FFF;
+    margin: 0 5px ;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.bar {
+    width: 250px;
+    border-bottom:1px solid #FFE143;
+}
+
+.logo-and-presentation {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo-and-presentation .logo {
+    padding: 10px 50px 50px 10px;
+}
+
+.logo-and-presentation .logo img {
+    box-shadow: none;
+}
+
+.presentation {
+    width: 50%;
+    color: #FFF;
+    margin-top: 20px;
+}

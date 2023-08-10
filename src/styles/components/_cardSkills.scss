@@ -1,0 +1,68 @@
+.card-skill {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 85px;
+    margin: 20px;
+    border: solid 2px #FFE143;
+    border-radius: 10px;
+    transition: transform 250ms;
+}
+
+.card-skill .title {
+    color: #FFF;
+}
+
+.card-skill:hover {
+    cursor: pointer;
+    background: #1f1f1f;
+    transition: all 0.3s;
+
+    .title {
+        transform: translateY(-10px);
+        transition: all 0.3s ease 0s;
+    }
+    .level {
+        opacity: 1;
+        transform: translateY(15px);
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.language-logo {
+    max-width: 50px;
+    margin: 0 15px;
+    height: auto;
+}
+
+.level {
+    position: absolute;
+    opacity: 0;
+    color: #FFF;
+    margin-top: 5px;
+    top: 30px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.title-and-level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.visible a {
+    display: flex;
+}
+

@@ -1,12 +1,20 @@
 import React from "react";
-import Card from "./Card";
-import { logementList } from "../datas/logementList";
+import ProjectCard from "./ProjectCard";
+import { ProjectList } from "../datas/ProjectList";
 
 const Gallery = () => {
   return (
-    <div className="gallery">
-      {logementList.map((e) => (
-        <Card key={e.id} id={e.id} title={e.title} cover={e.cover} />
+    <div className="project-gallery">
+      {ProjectList.map((e) => (
+        <ProjectCard
+          key={e.id}
+          id={e.id}
+          title={e.title}
+          cover={e.cover}
+          description={e.description}
+          skills={e.skills}
+          github={e.github}
+        />
       ))}
     </div>
   );
