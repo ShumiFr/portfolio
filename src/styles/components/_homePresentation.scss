@@ -3,15 +3,15 @@
 }
 
 .home-presentation p:first-child {
-    color: #FFE143;
+    color: $color-yellow;
 }
 
 .home-presentation p {
-    color: #FFF;
+    color: $color-white
 }
 
 .home-presentation h1 {
-    color: #FFF;
+    color: $color-white;
 }
 
 .home-presentation-and-logo {
@@ -22,7 +22,7 @@
 }
 
 .typewriter {
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,225,67,1) 100%);
+    background: linear-gradient(90deg, $color-white 0%, $color-yellow 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -42,5 +42,5 @@
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #FFE143; }
+    50% { border-color: $color-yellow; }
 }

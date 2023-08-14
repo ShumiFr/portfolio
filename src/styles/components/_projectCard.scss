@@ -11,7 +11,7 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    background: #1f1f1f;
+    background: $color-background-light;
     border-radius: 5px;
     transition: transform 250ms;
 }
@@ -22,19 +22,19 @@
 }
 
 .project-card .description {
-    color: #FFF;
+    color: $color-white;
     margin-left: 10px;
     font-size: small;
 }
 
 .project-card .project-skills {
-    color: #FFE143;
+    color: $color-yellow;
     margin: 10px;
     font-size: small;
 }
 
 .project-card .title {
-    color: #FFF;
+    color: $color-white;
 }
 
 .project-card img {

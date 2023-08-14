@@ -5,18 +5,18 @@
     width: 20%;
     height: 85px;
     margin: 20px;
-    border: solid 2px #ffe143;
+    border: solid 2px $color-yellow;
     border-radius: 10px;
     transition: transform 250ms;
 }
 
 .card-skill .title {
-    color: #FFF;
+    color: $color-white;
 }
 
 .card-skill:hover {
     cursor: pointer;
-    background: rgb(31, 31, 31);
+    background: $color-background-light;
     transition: all 0.3s;
 
     .title {
@@ -47,7 +47,7 @@
 .level {
     position: absolute;
     opacity: 0;
-    color: #FFF;
+    color: $color-white;
     margin-top: 5px;
     top: 30px;
 }

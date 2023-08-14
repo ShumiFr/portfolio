@@ -1,8 +1,8 @@
 .button button{
-    background-color: #111111;
+    background-color: $color-background;
     border: none;
     border-radius: 5px;
-    color: #FFE143;
+    color: $color-yellow;
     padding: 10px 20px;
     margin-left: 20px;
     margin-top: 20px;
@@ -14,7 +14,7 @@
 }
 
 .button.active {
-    background-color: #1f1f1f;
+    background-color: $color-background-light;
 }
 
 .button button:first-child {
@@ -22,18 +22,18 @@
 }
 
 .button button:hover {
-    background-color: #1f1f1f;
+    background-color: $color-background-light;
     cursor: pointer;
 }
 
 .button checked {
-    background-color: #1f1f1f;
+    background-color: $color-background-light;
 }
 
 .skills {
     display: flex;
     align-items: center;
-    color: #FFF;
+    color: $color-white;
     margin-left: 120px;
     margin-top: 20px;
 }

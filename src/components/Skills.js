@@ -3,7 +3,11 @@ import React from "react";
 const Skills = (props) => {
   return (
     <div className="tag-skills">
-      <span>{props.skills}</span>
+      {props.skills.map((skill, index) => (
+        <span key={index} className={`skill`}>
+          {skill.name}
+        </span>
+      ))}
     </div>
   );
 };

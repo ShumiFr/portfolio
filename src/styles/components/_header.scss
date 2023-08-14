@@ -7,7 +7,7 @@
 }
 
 .header p {
-    color: #FFE143;
+    color: $color-yellow;
 }
 
 .navigation ul {
@@ -18,7 +18,7 @@
 .navigation li {
     font-size: 15px;
     margin: 50px 20px;
-    color: #FFF;
+    color: $color-white;
 }
 
 .navigation a {
@@ -27,8 +27,8 @@
 
 .navigation .active li{
     padding-bottom: 5px;
-    border-bottom: solid #FFE143;
-    color: #FFF;
+    border-bottom: solid $color-yellow;
+    color: $color-white;
 }
 
 .github-logo img{

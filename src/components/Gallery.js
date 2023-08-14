@@ -10,9 +10,9 @@ const Gallery = () => {
           key={e.id}
           id={e.id}
           title={e.title}
-          picture={e.picture}
+          minipicture={e.minipicture}
           description={e.description}
-          skills={e.skills}
+          skills={e.skills.map((skill) => skill.name).join(", ")} // Utilisation de .join()
           github={e.github}
         />
       ))}

@@ -1,8 +1,49 @@
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import logo from "../assets/img/logo.png";
 
-import React from "react";
-
 const ContactForm = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  const [errors, setErrors] = useState({ name: "", email: "", message: "" }); // Nouvel état pour les messages d'erreur
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const { name, email, message } = form.current;
+
+    // Vérifier les champs requis
+    if (!name.value || !email.value || !message.value) {
+      setErrors({
+        name: name.value ? "" : "Veuillez entrer votre nom",
+        email: email.value ? "" : "Veuillez entrer votre email",
+        message: message.value ? "" : "Veuillez entrer votre message",
+      });
+      return;
+    }
+
+    // Réinitialiser les erreurs en cas de succès d'envoi
+    setErrors({ name: "", email: "", message: "" });
+
+    emailjs
+      .sendForm(
+        "service_od1y284",
+        "template_qksmxec",
+        form.current,
+        "nWAz14NEV7XCn6jnM"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSent(true);
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="form-section">
       <div className="text-form">
@@ -20,83 +61,38 @@ const ContactForm = () => {
         <div className="logo">
           <img src={logo} alt="Logo" className="logo" />
         </div>
-
         <div className="form">
-          <form
-            className="formular"
-            action="#contact"
-            method="post"
-            name="sendmail"
-            data-netlify="true"
-            onSubmit="submit"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <div className="form-name">
-              <div className="form-group form-lastname">
-                <label>Nom</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  placeholder="Nom"
-                />
-              </div>
-
-              <div className="form-group form-firstname">
-                <label>Prénom</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  id="firstname"
-                  name="firstname"
-                  placeholder="Prénom"
-                />
-              </div>
+          <form ref={form} onSubmit={sendEmail} className="formular">
+            <div className="form-group">
+              <label>Nom</label>
+              <input className="form-control" type="text" name="name" />
+              {errors.name && (
+                <div className="error-message">{errors.name}</div>
+              )}
             </div>
-
-            <div className="form-group form-email">
+            <div className="form-group">
               <label>Email</label>
-              <input
-                className="form-control"
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Email"
-              />
+              <input className="form-control" type="email" name="email" />
+              {errors.email && (
+                <div className="error-message">{errors.email}</div>
+              )}
             </div>
-
-            <div className="form-group form-subject">
-              <label>Sujet</label>
-              <input
-                className="form-control"
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Sujet"
-              />
+            <div className="form-group">
+              <label>Message</label>
+              <textarea className="message form-control" name="message" />
+              {errors.message && (
+                <div className="error-message">{errors.message}</div>
+              )}
             </div>
-
-            <div className="form-group form-message">
-              <label>Votre message</label>
-              <textarea
-                className="message form-control"
-                id="message"
-                name="message"
-                placeholder="Votre message"
-              ></textarea>
-            </div>
-
-            <button
-              id="submit-message-form"
-              name="sendmail"
-              value="sendmail"
-              className="btn btn-primary"
-              type="submit"
-            >
-              Envoyer mon message
+            <button className="btn btn-primary" type="submit">
+              Envoyer
             </button>
           </form>
+          {isSent && (
+            <div className="validation-message">
+              Votre email a bien été envoyé !
+            </div>
+          )}
         </div>
       </div>
     </div>

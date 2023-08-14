@@ -1,5 +1,5 @@
 .form-section {
-    color: #FFF;
+    color: $color-white;
 }
 
 .title-and-logo .logo {
@@ -7,14 +7,15 @@
 }
 
 .form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: $color-background-light;
+    width: 500px;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .link {
     text-decoration: underline;
-    color: #FFE143;
+    color: $color-yellow;
 }
 
 .text-form {
@@ -28,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: #FFF;
+    color: $color-white;
     margin-top: 90px;
 }
 
@@ -39,45 +40,35 @@
 }
 
 input:focus, textarea:focus{
-    outline-color: #1f1f1f;
+    outline-color: $color-background-light;
 }
 
 .form-group label {
     margin-bottom: 6px;
-    color: #FFE143;
+    color: $color-yellow;
     font-size: medium;
-}
-
-.form-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .form-lastname {
-        margin-right: 20px;
-    }
 }
 
 .form-control {
     width: 100%;
     padding: 10px 10px;
-    color: #1f1f1f;
-    background-color: #fff;
+    color: $color-background-light;
+    background-color: $color-white;
     background-clip: padding-box;
-    border: 1px solid #FFF;
+    border: 1px solid $color-white;
     appearance: none;
     border-radius: 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.formular .btn-primary {
+.form .btn-primary {
     margin-top: 1.875rem;
     margin-left: auto;
 }
 
 .btn {
-    background-color: #1f1f1f;
-    color: white;
+    background-color: $color-background-light;
+    color: $color-white;
     padding: 10px 20px;
     font-size: larger;
     border: none;
@@ -92,8 +83,8 @@ input:focus, textarea:focus{
 }
 
 .btn:hover {
-    background-color: #FFE143;
-    color: #1f1f1f;
+    background-color: $color-yellow;
+    color: $color-background-light;
     transition: all 0.5s;
 }
 
@@ -107,4 +98,12 @@ textarea.form-control {
     border: none;
     border-radius: 7px;
     box-shadow: 0 5px 20px 0 rgba(70, 70, 78, 0.1);
+}
+
+.validation-message {
+    color: $color-yellow;
+}
+
+.error-message {
+    color: red;
 }
