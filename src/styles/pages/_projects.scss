@@ -56,5 +56,29 @@
 }
 
 .study-body {
+    width: 80%;
+    margin: auto;
     color: $color-white;
+}
+
+.study-body h2 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid $color-yellow;
+}
+
+.concept-description, .solution-description, .problem-description {
+    margin: 20px 0;
+}
+
+.solution-description {
+    display: flex;
+    align-items: center;
+}
+
+.solution-description img{
+    display: block;
+    width: 80%;
+    border-radius: 20px;
+    object-fit: contain;
+    margin: 50px auto;
 }

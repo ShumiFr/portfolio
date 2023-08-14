@@ -3,7 +3,7 @@ import React from "react";
 const Concept = (props) => {
   return (
     <div className="concept-zone">
-      <div className="concept-title">Concept</div>
+      <h2 className="concept-title">Concept</h2>
       <div className="concept-description">{props.concept}</div>
     </div>
   );
