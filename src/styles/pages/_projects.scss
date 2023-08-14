@@ -40,15 +40,22 @@
 }
 
 .project-link:hover {
-    background-color: $color-white;
-    color: $color-background;
-    transition: all 0.3s;
+    background-color: $color-yellow;
+    color: $color-background-light;
+    transition: all 0.5;
 }
 
 .study {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.study-body {
+    background-color: $color-background-light;
+    padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .skills-zone {
