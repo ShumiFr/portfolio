@@ -64,7 +64,7 @@ const ContactForm = () => {
         <div className="form">
           <form ref={form} onSubmit={sendEmail} className="formular">
             <div className="form-group">
-              <label>Name</label>
+              <label>Nom</label>
               <input className="form-control" type="text" name="name" />
               {errors.name && (
                 <div className="error-message">{errors.name}</div>

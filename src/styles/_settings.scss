@@ -5,6 +5,13 @@
   
 $font-1: "font-1", sans-serif;
 
+
+$color-background: #111111;
+$color-background-light: #191919;
+
+$color-yellow: #FFE143;
+$color-white: #FFF;
+
 * {
 padding: 0;
 margin: 0;
@@ -13,7 +20,7 @@ box-sizing: border-box;
 
 body {
 font-family: $font-1;
-background: #111111;
+background: $color-background;
 max-width: 1440px;
 margin: auto;
 }
@@ -23,13 +30,13 @@ body::-webkit-scrollbar {
 }
   
 body::-webkit-scrollbar-track {
-    background: #1f1f1f; /* color of the tracking area */
+    background: $color-background-light; /* color of the tracking area */
 }
   
 body::-webkit-scrollbar-thumb {
-    background-color: #FFF; /* color of the scroll thumb */
+    background-color: $color-white; /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
-    border: 3px solid #1f1f1f; /* creates padding around scroll thumb */
+    border: 3px solid $color-background-light; /* creates padding around scroll thumb */
 }
 
 li {

@@ -4,11 +4,11 @@
     margin: 0 50px;
     border-radius: 20px;
     display: block;
-    background: #191919
+    background: $color-background-light;
 }
 
 .about h1 {
-    color: #FFF;
+    color: $color-white;
     margin: 0 5px ;
 }
 
@@ -20,7 +20,7 @@
 
 .bar {
     width: 250px;
-    border-bottom:1px solid #FFE143;
+    border-bottom:1px solid $color-yellow;
 }
 
 .logo-and-presentation {
@@ -39,6 +39,6 @@
 
 .presentation {
     width: 50%;
-    color: #FFF;
+    color: $color-white;
     margin-top: 20px;
 }
