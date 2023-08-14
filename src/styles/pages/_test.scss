@@ -7,10 +7,9 @@
 }
 
 .form {
-    background-color: #1f1f1f;
-    width: 500px;
-    padding: 20px;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .link {
@@ -49,6 +48,16 @@ input:focus, textarea:focus{
     font-size: medium;
 }
 
+.form-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-lastname {
+        margin-right: 20px;
+    }
+}
+
 .form-control {
     width: 100%;
     padding: 10px 10px;
@@ -61,7 +70,7 @@ input:focus, textarea:focus{
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form .btn-primary {
+.formular .btn-primary {
     margin-top: 1.875rem;
     margin-left: auto;
 }
@@ -98,8 +107,4 @@ textarea.form-control {
     border: none;
     border-radius: 7px;
     box-shadow: 0 5px 20px 0 rgba(70, 70, 78, 0.1);
-}
-
-.validation-message {
-    color: #FFE143;
 }

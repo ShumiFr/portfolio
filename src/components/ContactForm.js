@@ -1,8 +1,33 @@
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import logo from "../assets/img/logo.png";
 
-import React from "react";
-
 const ContactForm = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false); // Nouvel état pour le message de validation
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_od1y284",
+        "template_qksmxec",
+        form.current,
+        "nWAz14NEV7XCn6jnM"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSent(true); // Mettre à jour l'état après l'envoi réussi
+          form.current.reset(); // Réinitialiser les champs du formulaire
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="form-section">
       <div className="text-form">
@@ -20,83 +45,29 @@ const ContactForm = () => {
         <div className="logo">
           <img src={logo} alt="Logo" className="logo" />
         </div>
-
         <div className="form">
-          <form
-            className="formular"
-            action="#contact"
-            method="post"
-            name="sendmail"
-            data-netlify="true"
-            onSubmit="submit"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <div className="form-name">
-              <div className="form-group form-lastname">
-                <label>Nom</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  placeholder="Nom"
-                />
-              </div>
-
-              <div className="form-group form-firstname">
-                <label>Prénom</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  id="firstname"
-                  name="firstname"
-                  placeholder="Prénom"
-                />
-              </div>
+          <form ref={form} onSubmit={sendEmail} className="formular">
+            <div className="form-group">
+              <label>Name</label>
+              <input className="form-control" type="text" name="name" />
             </div>
-
-            <div className="form-group form-email">
+            <div className="form-group">
               <label>Email</label>
-              <input
-                className="form-control"
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Email"
-              />
+              <input className="form-control" type="email" name="email" />
             </div>
-
-            <div className="form-group form-subject">
-              <label>Sujet</label>
-              <input
-                className="form-control"
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Sujet"
-              />
+            <div className="form-group">
+              <label>Message</label>
+              <textarea className="message form-control" name="message" />
             </div>
-
-            <div className="form-group form-message">
-              <label>Votre message</label>
-              <textarea
-                className="message form-control"
-                id="message"
-                name="message"
-                placeholder="Votre message"
-              ></textarea>
-            </div>
-
-            <button
-              id="submit-message-form"
-              name="sendmail"
-              value="sendmail"
-              className="btn btn-primary"
-              type="submit"
-            >
-              Envoyer mon message
+            <button className="btn btn-primary" type="submit">
+              Envoyer
             </button>
           </form>
+          {isSent && (
+            <div className="validation-message">
+              Votre email a bien été envoyé !
+            </div>
+          )}
         </div>
       </div>
     </div>
