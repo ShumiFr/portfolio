@@ -36,4 +36,11 @@ li {
 list-style-type: none;
 }
 
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
 
