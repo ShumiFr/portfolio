@@ -4,10 +4,26 @@ import logo from "../assets/img/logo.png";
 
 const ContactForm = () => {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false); // Nouvel état pour le message de validation
+  const [isSent, setIsSent] = useState(false);
+  const [errors, setErrors] = useState({ name: "", email: "", message: "" }); // Nouvel état pour les messages d'erreur
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const { name, email, message } = form.current;
+
+    // Vérifier les champs requis
+    if (!name.value || !email.value || !message.value) {
+      setErrors({
+        name: name.value ? "" : "Veuillez entrer votre nom",
+        email: email.value ? "" : "Veuillez entrer votre email",
+        message: message.value ? "" : "Veuillez entrer votre message",
+      });
+      return;
+    }
+
+    // Réinitialiser les erreurs en cas de succès d'envoi
+    setErrors({ name: "", email: "", message: "" });
 
     emailjs
       .sendForm(
@@ -19,8 +35,8 @@ const ContactForm = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setIsSent(true); // Mettre à jour l'état après l'envoi réussi
-          form.current.reset(); // Réinitialiser les champs du formulaire
+          setIsSent(true);
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -50,14 +66,23 @@ const ContactForm = () => {
             <div className="form-group">
               <label>Name</label>
               <input className="form-control" type="text" name="name" />
+              {errors.name && (
+                <div className="error-message">{errors.name}</div>
+              )}
             </div>
             <div className="form-group">
               <label>Email</label>
               <input className="form-control" type="email" name="email" />
+              {errors.email && (
+                <div className="error-message">{errors.email}</div>
+              )}
             </div>
             <div className="form-group">
               <label>Message</label>
               <textarea className="message form-control" name="message" />
+              {errors.message && (
+                <div className="error-message">{errors.message}</div>
+              )}
             </div>
             <button className="btn btn-primary" type="submit">
               Envoyer
