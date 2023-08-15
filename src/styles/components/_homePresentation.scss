@@ -44,3 +44,18 @@
     from, to { border-color: transparent }
     50% { border-color: $color-yellow; }
 }
+
+@media screen and (max-width: 480px) {
+    .home-presentation-and-logo {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .home-presentation {
+        font-size: small;
+        margin-right: 0px;
+        margin-top: 50px;
+        text-align: center;
+    }
+}

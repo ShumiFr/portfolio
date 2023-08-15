@@ -6,3 +6,15 @@
     gap: 10px;
 }
 
+@media screen and (max-width: 480px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    };
+
+    .past-project-experience {
+        text-align: center;
+        font-size: small;
+        margin-top: 20px;
+    }
+}

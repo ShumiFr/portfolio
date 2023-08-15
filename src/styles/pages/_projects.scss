@@ -89,3 +89,9 @@
     object-fit: contain;
     margin: 50px auto;
 }
+
+@media screen and (max-width: 480px) {
+    .solution-description img {
+        width: 100%;
+    }
+}

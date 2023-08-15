@@ -2,7 +2,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 20%;
     height: 85px;
     margin: 20px;
     border: solid 2px $color-yellow;
@@ -31,7 +30,8 @@
 }
 
 .gallery {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
@@ -66,3 +66,19 @@
     display: flex;
 }
 
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0px;
+        font-size: small;
+        margin-bottom: 50px;
+    }
+
+    .title {
+        font-size: medium;
+    }
+
+    .card-skill {
+        margin: 15px;
+    }
+}

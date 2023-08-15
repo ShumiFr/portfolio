@@ -107,3 +107,22 @@ textarea.form-control {
 .error-message {
     color: red;
 }
+
+@media screen and (max-width: 480px) {
+    .row {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .text-form {
+        text-align: center;
+        font-size: small;
+        margin-top: 20px;
+    }
+
+    .form {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 90%;
+    }
+}
