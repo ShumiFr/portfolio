@@ -51,6 +51,11 @@
         z-index: 1000; /* Assure-toi qu'elle est au-dessus du contenu */
     }
 
+    .navigation li{
+        margin: 0;
+        padding: 10px;
+    }
+
     .header {
         margin-top: 10px;
     }
