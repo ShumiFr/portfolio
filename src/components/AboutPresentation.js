@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./Logo";
+import CV from "../assets/CV.pdf";
 
 const AboutPresentation = () => {
   return (
@@ -27,7 +28,11 @@ const AboutPresentation = () => {
             faire de <font color="#FFE143">la gestion de projet </font>
             ainsi que du <font color="#FFE143">Débug et de l'optimisation</font>
             . Je pense avoir beaucoup à apprendre encore alors je persévérerai
-            afin d'être une Développeuse Front-End !
+            afin d'être une Développeuse Front-End ! <br></br>
+            <br></br>
+            <a className="cv" href={CV} target="_blank" rel="noreferrer">
+              Télécharger mon CV
+            </a>
           </div>
         </div>
       </div>
