@@ -12,7 +12,7 @@ const ProjectCard = (props) => {
         <div className="description">{props.description}</div>
         <div className="project-skills">{props.skills}</div>
       </Link>
-      <a href={props.github} className="project-github">
+      <a href={props.github} target="blank" className="project-github">
         <img src={GithubLogo} alt="github-logo" />
       </a>
     </div>

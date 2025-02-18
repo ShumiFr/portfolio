@@ -2,7 +2,7 @@ export const LanguageList = [
   {
     id: 1,
     title: "HTML",
-    level: "Avancé",
+    level: "Intermédiaire",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png",
   },
   {
@@ -14,7 +14,7 @@ export const LanguageList = [
   {
     id: 3,
     title: "JavaScript",
-    level: "Intermédiaire",
+    level: "Débutant",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
   },
   {
@@ -26,7 +26,7 @@ export const LanguageList = [
   {
     id: 5,
     title: "ReactJs",
-    level: "Avancé",
+    level: "Débutant",
     logo: "https://www.pngmart.com/files/23/React-Logo-PNG-HD.png",
   },
 ];

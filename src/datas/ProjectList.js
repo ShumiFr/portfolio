@@ -162,4 +162,54 @@ export const ProjectList = [
       </div>
     ),
   },
+  {
+    id: 5,
+    title: "Ohmyfood",
+    picture: "/ohmyfood/ohmyfood.png",
+    minipicture: "/ohmyfood/miniOhmyfood.png",
+    description:
+      "Dynamisez une page web avec des animations CSS avec l'aide de Sass.",
+    skills: [{ name: "HTML" }, { name: "CSS" }, { name: "Sass" }],
+    github: "https://github.com/ShumiFr/Projet-3",
+    concept:
+      "Ohmyfood est une jeune startup qui voudrait s'imposer sur le marché de la restauration. Déjà présente à New-York, elle souhaite désormais faire sa place à Paris. Pour cela, je devais réaliser leur site en mobile first qui répertorie les menus des restaurants gastronomiques.",
+    problem:
+      "Il faut réaliser le site en mobile first et ajouter des animations CSS pour dynamiser le site.",
+    solution: (
+      <div>
+        <p>
+          J'ai d'abord commencer par mettre en place mon environnement de
+          développement avec un repo github et une structure de projet contenant
+          une page index.html, un dossier d'assets, un dossier pour le sass et
+          un dossier pour y mettre toute les pages du site.
+          <img src="/ohmyfood/code-initial.png" alt="Code de début de projet" />
+        </p>
+        <p>
+          Ensuite j'ai créer la version mobile de la page d'accueil en
+          respectant la maquette figma fourni.
+          <img
+            src="/ohmyfood/page-d'accueil-mobile.png"
+            alt="Page d'accueil en version mobile"
+          />
+        </p>
+        <p>
+          J'ai ajouter par la suite les animations à la page d'accueil. J'ai
+          utiliser sass pour créer des variables et des mixins pour faciliter la
+          création des animations. Ce n'était pas obligatoire mais j'ai préféré
+          utiliser sass pour m'entrainer.
+          <img src="/ohmyfood/animations.gif" alt="Animations" />
+        </p>
+        <p>
+          J'ai ensuite rajouter la page de restaurant, avec leur menu, le fait
+          d'ajouter les plats que l'on souhaite et le bouton de confirmation.
+          <img src="/ohmyfood/autrePage.gif" alt="Page restaurant" />
+        </p>
+        <p>
+          Et pour finir l'ajout du responsive de toute les pages du site. Aussi
+          bien en version mobile qu'en version desktop et tablette.
+          <img src="/ohmyfood/testResponsive.gif" alt="Responsive" />
+        </p>
+      </div>
+    ),
+  },
 ];

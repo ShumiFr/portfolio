@@ -14,21 +14,24 @@ const AboutPresentation = () => {
           <Logo />
           <div className="presentation">
             &emsp;&emsp;Bonjour tout le monde ! Je m'appelle{" "}
-            <font color="#FFE143">Pauline Gagnaire</font>. Je suis encore en
-            formation, mais j'aspire à devenir une vrai{" "}
-            <font color="#FFE143">Développeuse Web Front-end !</font> Pour moi,
-            l'informatique n'est pas qu'un métier, c'est surtout une passion.
-            J'adore coder malgré les difficultés et je ne lâche rien !<br />
+            <font color="#FFE143">Pauline Gagnaire</font>. Je suis désormais
+            détentrice du titre de{" "}
+            <font color="#FFE143">
+              Développeuse d'Applications - JavaScript React
+            </font>
+            . L'informatique n'est pas seulement mon métier, c'est avant tout
+            une passion. J'adore coder et relever de nouveaux défis !<br />
             <br />
             <br />
-            &emsp;&emsp;Dans ma formation, j'ai pu apprendre à réaliser
-            plusieurs projets qui m'ont permis d'apprendre beaucoup de langage
-            ainsi que tout les différents rôles d'un développeur web. J'y ai
-            appris à faire du <font color="#FFE143">Front et du Back</font>, à
-            faire de <font color="#FFE143">la gestion de projet </font>
-            ainsi que du <font color="#FFE143">Débug et de l'optimisation</font>
-            . Je pense avoir beaucoup à apprendre encore alors je persévérerai
-            afin d'être une Développeuse Front-End ! <br></br>
+            &emsp;&emsp;Au cours de ma formation, j'ai réalisé plusieurs projets
+            qui m'ont permis d'acquérir de solides compétences en développement
+            web. J'ai appris à maîtriser le{" "}
+            <font color="#FFE143">Front-end et le Back-end</font>, à gérer des
+            projets, ainsi qu'à effectuer du{" "}
+            <font color="#FFE143">débogage et de l'optimisation</font>. Je suis
+            toujours en quête de nouvelles connaissances et je suis déterminée à
+            continuer à progresser en tant que Développeuse Front-End !{" "}
+            <br></br>
             <br></br>
             <a className="cv" href={CV} target="_blank" rel="noreferrer">
               Télécharger mon CV
