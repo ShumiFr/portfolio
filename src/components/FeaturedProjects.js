@@ -18,7 +18,7 @@ const FeaturedProjects = ({ projects }) => {
 
   return (
     <div className="featured-projects">
-      <h2>Projets Principaux</h2>
+      <h2>Projets Professionnels</h2>
       <div className="carousel">
         <button className="carousel-button prev" onClick={prevSlide}>
           &#8249;

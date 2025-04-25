@@ -263,8 +263,8 @@ export const ProjectList = [
   {
     id: 7,
     title: "AlertesPedo",
-    picture: "/alertespedo/alertespedo.png",
-    minipicture: "/alertespedo/miniAlertespedo.png",
+    picture: "/alertesPedo/alertesPedo.png",
+    minipicture: "/alertesPedo/alertesPedo.png",
     description:
       "Application web de lutte contre la pédophilie, permettant aux utilisateurs de signaler et de suivre les cas suspects.",
     skills: [
@@ -282,16 +282,8 @@ export const ProjectList = [
     solution: (
       <div>
         <p>
-          Développement d'une interface utilisateur intuitive avec React,
-          permettant aux utilisateurs de : - Signaler des cas suspects - Suivre
-          l'évolution des signalements - Accéder à des ressources d'information
-          <img src="/alertespedo/interface.png" alt="Interface utilisateur" />
-        </p>
-        <p>
-          Mise en place d'un backend sécurisé avec Node.js et Express, incluant
-          : - Authentification des utilisateurs - Gestion des signalements -
-          Système de modération
-          <img src="/alertespedo/backend.png" alt="Architecture backend" />
+          Pour l'instant, j'ai créer la page d'accueil du site. Le backend est
+          gérer par d'autre developpeurs, mais il est bien avancé.
         </p>
       </div>
     ),
