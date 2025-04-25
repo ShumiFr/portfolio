@@ -269,9 +269,9 @@ export const ProjectList = [
       "Application web de lutte contre la pédophilie, permettant aux utilisateurs de signaler et de suivre les cas suspects.",
     skills: [
       { name: "React" },
-      { name: "Node.js" },
-      { name: "MongoDB" },
-      { name: "Express" },
+      { name: "TailwindCSS" },
+      { name: "TypeScript" },
+      { name: "Docker" },
     ],
     github: "https://github.com/ShumiFr/AlertesPedo",
     isPersonal: true,
