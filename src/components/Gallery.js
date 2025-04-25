@@ -1,19 +1,18 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { ProjectList } from "../datas/ProjectList";
 
-const Gallery = () => {
+const Gallery = ({ projects }) => {
   return (
     <div className="project-gallery">
-      {ProjectList.map((e) => (
+      {projects.map((project) => (
         <ProjectCard
-          key={e.id}
-          id={e.id}
-          title={e.title}
-          minipicture={e.minipicture}
-          description={e.description}
-          skills={e.skills.map((skill) => skill.name).join(", ")} // Utilisation de .join()
-          github={e.github}
+          key={project.id}
+          id={project.id}
+          title={project.title}
+          minipicture={project.minipicture}
+          description={project.description}
+          skills={project.skills.map((skill) => skill.name).join(", ")}
+          github={project.github}
         />
       ))}
     </div>

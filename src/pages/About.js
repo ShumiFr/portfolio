@@ -5,6 +5,14 @@ import { LanguageList } from "../datas/LanguageList";
 import CardSkill from "../components/CardSkill";
 import { ToolsList } from "../datas/ToolsList";
 
+// Définir l'ordre des niveaux
+const levelOrder = {
+  Débutant: 1,
+  Intermédiaire: 2,
+  Avancé: 3,
+  Expert: 4,
+};
+
 function createCard(LanguageList) {
   return (
     <CardSkill
@@ -30,6 +38,14 @@ function About() {
     }
   };
 
+  // Trier les listes par niveau
+  const sortedLanguages = [...LanguageList].sort(
+    (a, b) => levelOrder[b.level] - levelOrder[a.level]
+  );
+  const sortedTools = [...ToolsList].sort(
+    (a, b) => levelOrder[b.level] - levelOrder[a.level]
+  );
+
   return (
     <div>
       <Header />
@@ -54,11 +70,11 @@ function About() {
       </div>
 
       {activeGallery === "languages" && (
-        <div className="gallery">{LanguageList.map(createCard)}</div>
+        <div className="gallery">{sortedLanguages.map(createCard)}</div>
       )}
 
       {activeGallery === "tools" && (
-        <div className="gallery">{ToolsList.map(createCard)}</div>
+        <div className="gallery">{sortedTools.map(createCard)}</div>
       )}
     </div>
   );

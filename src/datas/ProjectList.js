@@ -8,6 +8,7 @@ export const ProjectList = [
       "Il s'agit de mon tout premier projet. J'y ai créé la page d'accueil d'une agence de voyage.",
     skills: [{ name: "HTML" }, { name: "CSS" }], // Utilisation d'un tableau pour les compétences
     github: "https://github.com/ShumiFr/Booki.git",
+    isPersonal: false,
     concept:
       "Booki est un site, enfin une page d'accueil, qui permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
     problem:
@@ -42,6 +43,7 @@ export const ProjectList = [
       "J'ai réalisé le Javascript de ce site. Je devais réaliser un site web dynamique. Il s'agit du premier projet sur lequel j'ai travaillé avec une API.",
     skills: [{ name: "JavaScript" }, { name: "NodeJs" }],
     github: "https://github.com/ShumiFr/Portfolio-architecte-sophie-bluel.git",
+    isPersonal: false,
     concept:
       "Il s'agit d'un portfolio de Sophie Bluel comprenant une galerie avec les projets de la photographe. Il est possible de les trier par types. La photographe, de son côté peut se connecter et rajouter des projets comme elle veux",
     problem:
@@ -82,6 +84,7 @@ export const ProjectList = [
       "Le projet que j'ai préféré faire. Je devais réaliser entièrement un site web de location immobilière.",
     skills: [{ name: "React" }, { name: "Sass" }],
     github: "https://github.com/ShumiFr/Kasa.git",
+    isPersonal: false,
     concept:
       "Kasa est une application web de location immobilière, le site a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Laura, la CTO, a donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end.",
     problem:
@@ -138,6 +141,7 @@ export const ProjectList = [
       { name: "BCrypt" },
     ],
     github: "https://github.com/ShumiFr/Mon-Vieux-Grimoire.git",
+    isPersonal: false,
     concept:
       "Booki est un site, enfin une page d'accueil, qui permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
     problem:
@@ -171,6 +175,7 @@ export const ProjectList = [
       "Dynamisez une page web avec des animations CSS avec l'aide de Sass.",
     skills: [{ name: "HTML" }, { name: "CSS" }, { name: "Sass" }],
     github: "https://github.com/ShumiFr/Projet-3",
+    isPersonal: false,
     concept:
       "Ohmyfood est une jeune startup qui voudrait s'imposer sur le marché de la restauration. Déjà présente à New-York, elle souhaite désormais faire sa place à Paris. Pour cela, je devais réaliser leur site en mobile first qui répertorie les menus des restaurants gastronomiques.",
     problem:
@@ -208,6 +213,85 @@ export const ProjectList = [
           Et pour finir l'ajout du responsive de toute les pages du site. Aussi
           bien en version mobile qu'en version desktop et tablette.
           <img src="/ohmyfood/testResponsive.gif" alt="Responsive" />
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 6,
+    title: "GameOn",
+    picture: "/game-on/GameOn.png",
+    minipicture: "/game-on/GameOn-Mini.png",
+    description:
+      "Création d'une landing page avec JavaScript pour une entreprise organisant des concours de jeux. Le projet se concentre sur la validation d'un formulaire d'inscription.",
+    skills: [{ name: "JavaScript" }, { name: "HTML" }, { name: "CSS" }],
+    github: "https://github.com/ShumiFr/GameOn-website-FR",
+    isPersonal: false,
+    concept:
+      "GameOn est une PME spécialisée dans les conférences et les concours de jeux. Le projet consiste à compléter la partie Front-End d'une landing page, en se concentrant particulièrement sur la validation d'un formulaire d'inscription aux concours. Le site doit être interactif et offrir une expérience utilisateur fluide.",
+    problem:
+      "Le développeur précédent (Jason) a quitté l'entreprise avant d'avoir terminé le projet. Il a laissé la structure HTML et le style CSS, ainsi que le code JavaScript de base pour lancer la modale, mais le formulaire n'est pas encore fonctionnel. Il faut donc implémenter la validation du formulaire et assurer son bon fonctionnement.",
+    solution: (
+      <div>
+        <p>
+          J'ai commencé par analyser le code existant et les maquettes Figma
+          pour comprendre la structure du projet. Ensuite, j'ai implémenté la
+          validation du formulaire en JavaScript en suivant ces étapes :
+          <img
+            src="/game-on/form-validation.gif"
+            alt="Validation du formulaire"
+          />
+        </p>
+        <p>
+          J'ai ajouté des validations pour chaque champ du formulaire : -
+          Vérification du prénom et du nom (2 caractères minimum) - Validation
+          de l'email (format correct) - Vérification de la date de naissance -
+          Validation du nombre de participations aux tournois - Vérification de
+          l'acceptation des conditions d'utilisation
+        </p>
+        <br />
+        <p>
+          J'ai également ajouté des messages d'erreur personnalisés pour guider
+          l'utilisateur en cas de saisie incorrecte, et j'ai implémenté la
+          soumission du formulaire une fois toutes les validations passées avec
+          succès.
+          <img src="/game-on/error-messages.gif" alt="Messages d'erreur" />
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 7,
+    title: "AlertesPedo",
+    picture: "/alertespedo/alertespedo.png",
+    minipicture: "/alertespedo/miniAlertespedo.png",
+    description:
+      "Application web de lutte contre la pédophilie, permettant aux utilisateurs de signaler et de suivre les cas suspects.",
+    skills: [
+      { name: "React" },
+      { name: "Node.js" },
+      { name: "MongoDB" },
+      { name: "Express" },
+    ],
+    github: "https://github.com/ShumiFr/AlertesPedo",
+    isPersonal: true,
+    concept:
+      "AlertesPedo est une plateforme de lutte contre la pédophilie qui permet aux utilisateurs de signaler des cas suspects, de suivre leur évolution et d'accéder à des ressources d'information.",
+    problem:
+      "La nécessité de créer une plateforme sécurisée et efficace pour la lutte contre la pédophilie, avec un système de signalement fiable et un suivi des cas.",
+    solution: (
+      <div>
+        <p>
+          Développement d'une interface utilisateur intuitive avec React,
+          permettant aux utilisateurs de : - Signaler des cas suspects - Suivre
+          l'évolution des signalements - Accéder à des ressources d'information
+          <img src="/alertespedo/interface.png" alt="Interface utilisateur" />
+        </p>
+        <p>
+          Mise en place d'un backend sécurisé avec Node.js et Express, incluant
+          : - Authentification des utilisateurs - Gestion des signalements -
+          Système de modération
+          <img src="/alertespedo/backend.png" alt="Architecture backend" />
         </p>
       </div>
     ),
